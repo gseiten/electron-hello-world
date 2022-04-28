@@ -1,0 +1,27 @@
+{
+  "name": "helloworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron main.js",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^18.1.0",
+    "electron-builder": "^23.0.3"
+  },
+  "dependencies": {
+    "app-builder-bin": "^4.1.2",
+    "electron-updater": "^5.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gseiten/electron-hello-world"
+  }
+}
