@@ -18,6 +18,9 @@ function createWindow() {
         mainWindow = null;
     });
     mainWindow.webContents.openDevTools();
+    mainWindow.once('ready-to-show', () => {
+        autoUpdater.checkForUpdatesAndNotify();
+    });
 }
 
 app.on('ready', () => {
@@ -34,10 +37,6 @@ app.on('activate', function () {
     if (mainWindow === null) {
         createWindow();
     }
-});
-
-mainWindow.once('ready-to-show', () => {
-    autoUpdater.checkForUpdatesAndNotify();
 });
 
 autoUpdater.on('update-available', () => {
